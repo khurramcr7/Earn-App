@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aalim Books — Scholar Projects</title>
+<meta name="description" content="Paid translation and research projects for scholars working with Aalim Books International.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Public+Sans:wght@400;500;600&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F7F4; --card:#FFFFFF; --ink:#1C2420; --muted:#5B6862; --line:#D6DDD7;
+  --green:#173F34; --green-soft:#E3ECE7; --gold:#9A6E22; --gold-line:#D9BF8C; --red:#9E3426; --red-soft:#F7E7E3;
+  --serif:"Spectral","Amiri",Georgia,serif; --sans:"Public Sans","Amiri",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:var(--green)}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+header.top{background:var(--green);color:#F2F5F1}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.mark{font-family:var(--serif);font-size:21px;font-weight:500;letter-spacing:.2px}
+.mark small{display:block;font-family:var(--sans);font-size:12.5px;font-weight:400;opacity:.78;letter-spacing:0}
+.who{font-size:14px;opacity:.9;text-align:right}
+nav.tabs{border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:5}
+nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto}
+nav.tabs button{background:none;border:0;padding:14px 12px 12px;font-weight:500;color:var(--muted);border-bottom:3px solid transparent;white-space:nowrap;cursor:pointer}
+nav.tabs button[aria-current="page"]{color:var(--green);border-bottom-color:var(--green)}
+nav.tabs .count{display:inline-block;min-width:20px;margin-left:4px;padding:0 6px;border-radius:10px;background:var(--green-soft);color:var(--green);font-size:12.5px;text-align:center}
+main{padding:24px 0 64px}
+h1{font-family:var(--serif);font-weight:500;font-size:30px;line-height:1.2;margin:0 0 6px}
+h2{font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.25;margin:0}
+.lead{color:var(--muted);margin:0 0 22px}
+.slip{background:var(--card);border:1px solid var(--line);border-radius:6px;margin:0 0 18px}
+.slip-head{display:flex;justify-content:space-between;gap:16px;padding:18px 20px 14px}
+.fee{font-family:var(--serif);color:var(--gold);font-size:28px;line-height:1;text-align:right;white-space:nowrap}
+.fee small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:6px}
+.facts{color:var(--muted);font-size:14.5px;margin-top:6px}
+.slip-body{padding:0 20px 16px}
+.desc{white-space:pre-wrap;margin:0}
+.desc.clamp{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.more{background:none;border:0;padding:4px 0;color:var(--green);font-weight:500;cursor:pointer}
+.source{font-size:14.5px;margin-top:8px}
+.source b{font-weight:600}
+.tear{border:0;border-top:2px dashed var(--gold-line);margin:0}
+.slip-foot{padding:14px 20px 18px;background:#FBFCFA;border-radius:0 0 6px 6px}
+.state{font-size:14.5px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:500;background:var(--green-soft);color:var(--green)}
+.pill.warn{background:#F6EBD6;color:#7A5418}.pill.bad{background:var(--red-soft);color:var(--red)}.pill.grey{background:#ECEFEC;color:var(--muted)}
+.feedback{background:var(--red-soft);border-left:3px solid var(--red);padding:10px 12px;margin:10px 0;border-radius:0 4px 4px 0;font-size:15px;white-space:pre-wrap}
+.feedback.ok{background:var(--green-soft);border-left-color:var(--green)}
+form.stack{display:grid;gap:12px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-size:14px;font-weight:500;margin-bottom:4px}
+label .opt{font-weight:400;color:var(--muted)}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:5px;background:#fff}
+textarea{min-height:90px;resize:vertical}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:5px;padding:10px 18px;border:1px solid var(--green);background:var(--green);color:#fff;font-weight:600;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--green)}
+.btn.link{border:0;background:none;color:var(--muted);padding:6px 0;font-weight:500}
+.btn[disabled]{opacity:.6;cursor:wait}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:6px;padding:28px 20px;text-align:center;color:var(--muted)}
+.totals{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.total{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.total .n{font-family:var(--serif);font-size:26px;color:var(--gold);line-height:1.15}
+.total .l{color:var(--muted);font-size:14px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);font-size:15px;vertical-align:top}
+th{font-weight:600;font-size:13.5px;color:var(--muted);background:#FBFCFA}
+tr:last-child td{border-bottom:0}
+.auth{max-width:420px;margin:32px auto 0}
+.auth .card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:24px 22px}
+.switch{margin-top:14px;font-size:15px;color:var(--muted)}
+.switch button{background:none;border:0;color:var(--green);font-weight:600;cursor:pointer;padding:0}
+.note{font-size:14px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;border-radius:6px;font-size:15px;max-width:92vw;box-shadow:0 6px 24px rgba(23,63,52,.25);z-index:20}
+.toast.err{background:var(--red)}
+[hidden]{display:none!important}
+@media (max-width:560px){
+  h1{font-size:25px}.slip-head{flex-direction:column;gap:8px}.fee{text-align:left}
+  .row2,.totals{grid-template-columns:1fr}
+  nav.tabs .wrap{gap:0;padding:0}
+  nav.tabs button{flex:1;padding:13px 4px 11px;font-size:14.5px}
+  nav.tabs .long{display:none}
+  th:nth-child(3),td:nth-child(3){display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="mark">Aalim Books<small>Scholar projects</small></div>
+  <div class="who" id="who"></div>
+</div></header>
+<nav class="tabs" id="tabs" hidden><div class="wrap">
+  <button data-tab="open">Open<span class="long"> projects</span><span class="count" id="c-open"></span></button>
+  <button data-tab="mine">My work<span class="count" id="c-mine"></span></button>
+  <button data-tab="pay">Payments</button>
+  <button data-tab="profile">Profile</button>
+</div></nav>
+<main><div class="wrap" id="app"></div></main>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function(){
+  var KEY = "aalim.scholar.token";
+  var app = document.getElementById("app");
+  var state = { tab: "open", me: null, open: [], mine: [], earnings: null };
+  function token(){ try { return localStorage.getItem(KEY) || ""; } catch(e){ return ""; } }
+  function setToken(t){ try { t ? localStorage.setItem(KEY, t) : localStorage.removeItem(KEY); } catch(e){} }
+
+  function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]; }); }
+  function money(n, cur){ return (cur || "PKR") + " " + Number(n || 0).toLocaleString("en-US", { maximumFractionDigits: 2 }); }
+  function day(d){ return d ? new Date(d).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" }) : ""; }
+  function totals(map){ var k = Object.keys(map || {}); return k.length ? k.map(function(c){ return money(map[c], c); }).join(" + ") : money(0, "PKR"); }
+  var CAT = { translation: "Translation", review: "Translation review", proofreading: "Proofreading", typesetting: "Typesetting", research: "Research", teaching: "Teaching", other: "Other work" };
+
+  var toastTimer;
+  function toast(msg, isErr){
+    var t = document.getElementById("toast");
+    t.textContent = msg; t.className = "toast" + (isErr ? " err" : ""); t.hidden = false;
+    clearTimeout(toastTimer); toastTimer = setTimeout(function(){ t.hidden = true; }, isErr ? 6000 : 3500);
+  }
+
+  async function call(path, opts){
+    opts = opts || {};
+    var headers = { "Content-Type": "application/json" };
+    var tk = opts.token !== undefined ? opts.token : token();
+    if (tk) headers.Authorization = "Bearer " + tk;
+    var res = await fetch(path, { method: opts.method || "GET", headers: headers, body: opts.body ? JSON.stringify(opts.body) : undefined });
+    var data = {}; try { data = await res.json(); } catch(e){}
+    if (!res.ok) {
+      var err = new Error(data.message || ("Something went wrong (" + res.status + ")"));
+      err.status = res.status; throw err;
+    }
+    return data;
+  }
+
+  async function login(email, password){
+    var r = await call("/auth/customer/emailpass", { method: "POST", body: { email: email, password: password }, token: "" });
+    return r.token;
+  }
+
+  // ---------- Sign in / create account ----------
+  function renderAuth(mode){
+    document.getElementById("tabs").hidden = true;
+    document.getElementById("who").textContent = "";
+    var signup = mode === "signup";
+    app.innerHTML =
+      '<div class="auth">' +
+      '<h1>' + (signup ? "Create your scholar account" : "Sign in") + '</h1>' +
+      '<p class="lead">' + (signup
+        ? "Use the same email address Aalim Books invited. Accounts are by invitation only."
+        : "See open projects, hand in your work and follow your payments.") + '</p>' +
+      '<div class="card"><form class="stack" id="authForm">' +
+      (signup ? '<div><label for="fn">Full name</label><input id="fn" name="full_name" autocomplete="name" required></div>' : '') +
+      '<div><label for="em">Email</label><input id="em" name="email" type="email" autocomplete="email" required></div>' +
+      '<div><label for="pw">Password' + (signup ? ' <span class="opt">(at least 8 characters)</span>' : '') + '</label>' +
+      '<input id="pw" name="password" type="password" minlength="' + (signup ? 8 : 1) + '" autocomplete="' + (signup ? "new-password" : "current-password") + '" required></div>' +
+      (signup ? '<div class="row2"><div><label for="ph">Phone / WhatsApp <span class="opt">(optional)</span></label><input id="ph" name="phone" autocomplete="tel"></div>' +
+        '<div><label for="co">Country <span class="opt">(optional)</span></label><input id="co" name="country" autocomplete="country-name"></div></div>' : '') +
+      '<div class="actions"><button class="btn" type="submit">' + (signup ? "Create account" : "Sign in") + '</button></div>' +
+      '</form></div>' +
+      '<p class="switch">' + (signup ? 'Already have an account? <button id="sw">Sign in</button>' : 'Invited by Aalim Books? <button id="sw">Create your account</button>') + '</p>' +
+      (signup ? '' : '<p class="note">Forgot your password? Message Aalim Books and we will reset it for you.</p>') +
+      '</div>';
+    document.getElementById("sw").onclick = function(){ renderAuth(signup ? "signin" : "signup"); };
+    document.getElementById("authForm").onsubmit = async function(e){
+      e.preventDefault();
+      var f = new FormData(e.target), btn = e.target.querySelector("button[type=submit]");
+      var email = String(f.get("email")).trim().toLowerCase(), password = String(f.get("password"));
+      btn.disabled = true;
+      try {
+        if (signup) {
+          var regToken;
+          try {
+            regToken = (await call("/auth/customer/emailpass/register", { method: "POST", body: { email: email, password: password }, token: "" })).token;
+          } catch (err) {
+            if (/exist/i.test(err.message)) regToken = await login(email, password); // account started before — continue it
+            else throw err;
+          }
+          await call("/scholar/register", { method: "POST", token: regToken, body: { full_name: f.get("full_name"), phone: f.get("phone"), country: f.get("country") } });
+        }
+        var t = await login(email, password);
+        setToken(t);
+        try { await loadAll(); }
+        catch (err) {
+          // Signed in but never finished sign-up (e.g. invited later): finish it now.
+          if (err.status === 401 || /not linked/i.test(err.message)) {
+            await call("/scholar/register", { method: "POST", token: t, body: {} });
+            setToken(await login(email, password));
+            await loadAll();
+          } else throw err;
+        }
+        toast(signup ? "Welcome — your account is ready" : "Signed in");
+      } catch (err) {
+        setToken("");
+        toast(/invalid email or password/i.test(err.message) ? "That email and password do not match." : err.message, true);
+      } finally { btn.disabled = false; }
+    };
+  }
+
+  // ---------- Data ----------
+  async function loadAll(){
+    var r = await Promise.all([call("/scholar/me"), call("/scholar/projects"), call("/scholar/earnings")]);
+    state.me = r[0].scholar; state.open = r[1].open; state.mine = r[1].mine; state.earnings = r[2];
+    document.getElementById("who").textContent = state.me.full_name;
+    document.getElementById("tabs").hidden = false;
+    var waiting = state.mine.filter(function(p){ return p.status === "assigned"; }).length;
+    document.getElementById("c-open").textContent = state.open.length || "";
+    document.getElementById("c-open").hidden = !state.open.length;
+    document.getElementById("c-mine").textContent = waiting || "";
+    document.getElementById("c-mine").hidden = !waiting;
+    render();
+  }
+  async function refresh(){ try { await loadAll(); } catch(err){ handle(err); } }
+  function handle(err){ if (err.status === 401) { setToken(""); renderAuth("signin"); toast("Please sign in again", true); } else toast(err.message, true); }
+
+  // ---------- Views ----------
+  function facts(p){
+    var bits = [CAT[p.category] || p.category];
+    if (p.word_count) bits.push("about " + Number(p.word_count).toLocaleString() + " words");
+    if (p.deadline) bits.push("due " + day(p.deadline));
+    return bits.join(", ");
+  }
+  function slipHead(p){
+    var a = p.my_application, agreed = p.assigned_to_me && a && a.status === "accepted" && a.proposed_amount != null;
+    var fee = agreed ? a.proposed_amount : p.budget;
+    return '<div class="slip-head"><div><h2 dir="auto">' + esc(p.title) + '</h2><div class="facts">' + esc(facts(p)) + '</div></div>' +
+      '<div class="fee">' + esc(Number(fee).toLocaleString("en-US")) + '<small>' + esc(p.currency) + (agreed ? ' agreed with you' : ' for the project') + '</small></div></div>' +
+      '<div class="slip-body"><p class="desc clamp" dir="auto">' + esc(p.description) + '</p>' +
+      '<button class="more" data-more>Read the full brief</button>' +
+      (p.source_reference ? '<div class="source" dir="auto"><b>Source text:</b> ' + esc(p.source_reference) + '</div>' : '') + '</div>';
+  }
+
+  function renderOpen(){
+    if (!state.open.length) return '<h1>Open projects</h1><div class="empty">No open projects right now. New work from Aalim Books will appear here.</div>';
+    return '<h1>Open projects</h1><p class="lead">Read the brief, then apply. If you are chosen, the project moves to My work.</p>' +
+      state.open.map(function(p){
+        var a = p.my_application, foot;
+        if (a && a.status === "pending") {
+          foot = '<div class="state"><span class="pill warn">You applied</span>' +
+            (a.proposed_amount != null ? 'Your price: ' + esc(money(a.proposed_amount, p.currency)) : 'At the listed fee') +
+            '<button class="btn link" data-withdraw="' + p.id + '">Withdraw</button></div>';
+        } else {
+          foot = '<details><summary class="btn ghost" style="list-style:none">Apply for this project</summary>' +
+            '<form class="stack" data-apply="' + p.id + '" style="margin-top:14px">' +
+            '<div><label>Why you are a good fit</label><textarea name="message" dir="auto" placeholder="Your experience with this kind of text, and anything you want us to know"></textarea></div>' +
+            '<div class="row2"><div><label>Your price <span class="opt">(leave empty to accept ' + esc(money(p.budget, p.currency)) + ')</span></label><input name="proposed_amount" type="number" min="0" inputmode="decimal"></div>' +
+            '<div><label>Days you need <span class="opt">(optional)</span></label><input name="proposed_days" type="number" min="1" inputmode="numeric"></div></div>' +
+            '<div class="actions"><button class="btn" type="submit">Send application</button></div></form></details>';
+        }
+        return '<article class="slip">' + slipHead(p) + '<hr class="tear"><div class="slip-foot">' + foot + '</div></article>';
+      }).join("");
+  }
+
+  function renderMine(){
+    if (!state.mine.length) return '<h1>My work</h1><div class="empty">When Aalim Books chooses you for a project, it appears here and you can hand in your work.</div>';
+    return '<h1>My work</h1><p class="lead">Hand in your work as a link (Google Drive, Dropbox or OneDrive). Make sure the link can be opened by Aalim Books.</p>' +
+      state.mine.map(function(p){
+        var subs = p.my_submissions || [], last = subs[0], foot = "";
+        if (p.status === "assigned") {
+          if (last && last.status === "changes_requested") foot += '<div class="feedback" dir="auto"><b>Changes requested:</b> ' + esc(last.feedback) + '</div>';
+          foot += '<form class="stack" data-submit="' + p.id + '">' +
+            '<div><label>Link to your work</label><input name="work_url" type="url" required placeholder="https://drive.google.com/…"></div>' +
+            '<div><label>Note for Aalim Books <span class="opt">(optional)</span></label><textarea name="note" dir="auto" placeholder="What is included, anything to check"></textarea></div>' +
+            '<div class="actions"><button class="btn" type="submit">' + (last ? "Hand in the corrected work" : "Hand in work") + '</button></div></form>';
+        } else if (p.status === "in_review") {
+          foot = '<div class="state"><span class="pill warn">Waiting for review</span>Handed in ' + esc(day(last && last.created_at)) + '</div>';
+        } else if (p.status === "completed") {
+          foot = '<div class="state"><span class="pill">Approved</span>Payment is listed under Payments.</div>' +
+            (last && last.feedback ? '<div class="feedback ok" dir="auto">' + esc(last.feedback) + '</div>' : '');
+        } else {
+          foot = '<div class="state"><span class="pill grey">' + (p.status === "cancelled" ? "Cancelled" : esc(p.status)) + '</span></div>';
+        }
+        return '<article class="slip">' + slipHead(p) + '<hr class="tear"><div class="slip-foot">' + foot + '</div></article>';
+      }).join("");
+  }
+
+  function renderPay(){
+    var e = state.earnings || { paid: {}, owed: {}, payouts: [] };
+    var noDetails = !state.me.payout_method;
+    return '<h1>Payments</h1><p class="lead">Approved work is paid to the account in your profile.</p>' +
+      (noDetails ? '<div class="feedback">Add how you want to be paid in your <a href="#" data-goto="profile">profile</a>, so payments can be sent.</div>' : '') +
+      '<div class="totals"><div class="total"><div class="n">' + esc(totals(e.owed)) + '</div><div class="l">On its way to you</div></div>' +
+      '<div class="total"><div class="n">' + esc(totals(e.paid)) + '</div><div class="l">Paid to you so far</div></div></div>' +
+      (e.payouts.length
+        ? '<table><thead><tr><th>Project</th><th>Amount</th><th>Paid on</th><th>Status</th></tr></thead><tbody>' +
+          e.payouts.map(function(p){
+            return '<tr><td dir="auto">' + esc(p.project_title || p.note || "Payment") + '</td><td>' + esc(money(p.amount, p.currency)) + '</td>' +
+              '<td>' + esc(p.paid_at ? day(p.paid_at) : "—") + (p.reference ? '<div class="note">Ref ' + esc(p.reference) + '</div>' : '') + '</td>' +
+              '<td>' + (p.status === "paid" ? '<span class="pill">Paid</span>' : p.status === "pending" ? '<span class="pill warn">To be paid</span>' : '<span class="pill grey">Cancelled</span>') + '</td></tr>';
+          }).join("") + '</tbody></table>'
+        : '<div class="empty">No payments yet. When your work is approved, the payment shows here.</div>');
+  }
+
+  function renderProfile(){
+    var m = state.me, methods = ["Bank transfer", "JazzCash", "Easypaisa", "Payoneer", "Wise", "Other"];
+    return '<h1>Profile</h1><p class="lead">Signed in as ' + esc(m.email) + '.</p>' +
+      '<div class="slip"><div class="slip-body" style="padding-top:18px"><form class="stack" id="profileForm">' +
+      '<div><label>Full name</label><input name="full_name" dir="auto" value="' + esc(m.full_name) + '" required></div>' +
+      '<div class="row2"><div><label>Phone / WhatsApp</label><input name="phone" value="' + esc(m.phone) + '"></div>' +
+      '<div><label>Country</label><input name="country" value="' + esc(m.country) + '"></div></div>' +
+      '<div><label>Your specialties</label><input name="specialties" dir="auto" value="' + esc(m.specialties) + '" placeholder="e.g. Ḥadīth, Ḥanafī fiqh, naḥw, Urdu–English"></div>' +
+      '<hr class="tear" style="margin:6px 0">' +
+      '<div><label>How you want to be paid</label><select name="payout_method"><option value="">Choose…</option>' +
+      methods.map(function(x){ return '<option' + (m.payout_method === x ? " selected" : "") + '>' + x + '</option>'; }).join("") + '</select></div>' +
+      '<div><label>Payment details</label><textarea name="payout_details" placeholder="Account title, bank name and IBAN — or wallet number — or Payoneer/Wise email">' + esc(m.payout_details) + '</textarea>' +
+      '<div class="note">Only Aalim Books can see these details.</div></div>' +
+      '<div class="actions"><button class="btn" type="submit">Save profile</button><button class="btn link" type="button" id="signout">Sign out</button></div>' +
+      '</form></div></div>';
+  }
+
+  function render(){
+    document.querySelectorAll("#tabs button").forEach(function(b){
+      if (b.dataset.tab === state.tab) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current");
+    });
+    app.innerHTML = { open: renderOpen, mine: renderMine, pay: renderPay, profile: renderProfile }[state.tab]();
+    bind();
+  }
+
+  function bind(){
+    app.querySelectorAll("[data-more]").forEach(function(b){
+      var d = b.previousElementSibling;
+      if (d.scrollHeight <= d.clientHeight + 2) { b.hidden = true; return; }
+      b.onclick = function(){ d.classList.toggle("clamp"); b.textContent = d.classList.contains("clamp") ? "Read the full brief" : "Show less"; };
+    });
+    app.querySelectorAll("[data-goto]").forEach(function(a){ a.onclick = function(e){ e.preventDefault(); state.tab = a.dataset.goto; render(); }; });
+    app.querySelectorAll("form[data-apply]").forEach(function(f){
+      f.onsubmit = async function(e){
+        e.preventDefault(); var d = new FormData(f), b = f.querySelector("button"); b.disabled = true;
+        try {
+          await call("/scholar/projects/" + f.dataset.apply + "/apply", { method: "POST", body: { message: d.get("message"), proposed_amount: d.get("proposed_amount"), proposed_days: d.get("proposed_days") } });
+          toast("Application sent"); await refresh();
+        } catch (err) { handle(err); } finally { b.disabled = false; }
+      };
+    });
+    app.querySelectorAll("[data-withdraw]").forEach(function(b){
+      b.onclick = async function(){
+        if (!confirm("Withdraw your application?")) return;
+        try { await call("/scholar/projects/" + b.dataset.withdraw + "/apply", { method: "DELETE" }); toast("Application withdrawn"); await refresh(); } catch (err) { handle(err); }
+      };
+    });
+    app.querySelectorAll("form[data-submit]").forEach(function(f){
+      f.onsubmit = async function(e){
+        e.preventDefault(); var d = new FormData(f), b = f.querySelector("button"); b.disabled = true;
+        try {
+          await call("/scholar/projects/" + f.dataset.submit + "/submit", { method: "POST", body: { work_url: d.get("work_url"), note: d.get("note") } });
+          toast("Work handed in — Aalim Books will review it"); await refresh();
+        } catch (err) { handle(err); } finally { b.disabled = false; }
+      };
+    });
+    var pf = document.getElementById("profileForm");
+    if (pf) {
+      pf.onsubmit = async function(e){
+        e.preventDefault(); var d = new FormData(pf), b = pf.querySelector("button"); b.disabled = true;
+        try {
+          var body = {}; d.forEach(function(v, k){ body[k] = v; });
+          state.me = (await call("/scholar/me", { method: "POST", body: body })).scholar;
+          document.getElementById("who").textContent = state.me.full_name;
+          toast("Profile saved");
+        } catch (err) { handle(err); } finally { b.disabled = false; }
+      };
+      document.getElementById("signout").onclick = function(){ setToken(""); state = { tab: "open" }; renderAuth("signin"); };
+    }
+  }
+
+  document.querySelectorAll("#tabs button").forEach(function(b){
+    b.onclick = function(){ state.tab = b.dataset.tab; render(); window.scrollTo(0, 0); };
+  });
+
+  if (token()) refresh(); else renderAuth("signin");
+})();
+</script>
+</body>
+</html>
