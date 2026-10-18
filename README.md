@@ -26,10 +26,11 @@ Built on **Medusa 2.21** with one custom module (`src/modules/earn`).
 
 ```bash
 cp .env.template .env        # set DATABASE_URL to a local Postgres
-npm install
-npx medusa db:migrate
-npx medusa user -e you@example.com -p a-strong-password
-npm run dev                  # admin: http://localhost:9000/app, portal: http://localhost:9000/portal
+corepack enable              # uses the pnpm version pinned in package.json
+pnpm install
+pnpm exec medusa db:migrate
+pnpm exec medusa user -e you@example.com -p a-strong-password
+pnpm dev                  # admin: http://localhost:9000/app, portal: http://localhost:9000/portal
 ```
 
 ## Code map
