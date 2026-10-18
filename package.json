@@ -1,7 +1,7 @@
 {
   "name": "aalim-scholar-earn",
   "version": "0.0.1",
-  "description": "Aalim Books Scholar Earn — projects for scholars, paid on approval.",
+  "description": "Aalim Books Scholar Earn \u2014 projects for scholars, paid on approval.",
   "author": "Medusa (https://medusajs.com)",
   "license": "MIT",
   "keywords": [
@@ -44,6 +44,6 @@
     "yalc": "^1.0.0-pre.53"
   },
   "engines": {
-    "node": ">=20"
+    "node": "22.x"
   }
 }
