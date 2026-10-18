@@ -6,7 +6,7 @@ const Project = model.define("earn_project", {
   title: model.text().searchable(),
   description: model.text(),
   category: model
-    .enum(["translation", "review", "proofreading", "typesetting", "research", "teaching", "other"])
+    .enum(["translation", "review", "proofreading", "typesetting", "publishing", "printing", "fatwa", "research", "teaching", "other"])
     .default("translation"),
   source_reference: model.text().nullable(), // book / pages / link to the Arabic text
   word_count: model.number().nullable(),
@@ -17,6 +17,7 @@ const Project = model.define("earn_project", {
     .enum(["draft", "open", "assigned", "in_review", "completed", "cancelled"])
     .default("open"),
   assigned_scholar_id: model.text().index().nullable(),
+  book_project_id: model.text().index().nullable(), // the book this work belongs to (optional)
 })
 
 export default Project

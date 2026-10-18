@@ -36,6 +36,7 @@ export async function POST(req: MedusaRequest, res: MedusaResponse) {
     currency: (str(b.currency, "Currency", { max: 3 }) || "PKR").toUpperCase(),
     deadline: date(b.deadline, "Deadline"),
     status: oneOf(b.status, ["draft", "open"] as const, "status") ?? "open",
+    book_project_id: str(b.book_project_id, "Book project", { max: 100 }),
   })
   res.status(201).json({ project })
 }

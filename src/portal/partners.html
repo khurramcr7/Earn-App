@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aalim Books — Partners</title>
+<meta name="description" content="Investors, publishers and authors working with Aalim Books International.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Public+Sans:wght@400;500;600&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F7F4; --card:#FFFFFF; --ink:#1C2420; --muted:#5B6862; --line:#D6DDD7;
+  --green:#173F34; --green-soft:#E3ECE7; --gold:#9A6E22; --gold-line:#D9BF8C; --red:#9E3426; --red-soft:#F7E7E3;
+  --serif:"Spectral","Amiri",Georgia,serif; --sans:"Public Sans","Amiri",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:var(--green)}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+header.top{background:var(--green);color:#F2F5F1}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.mark{font-family:var(--serif);font-size:21px;font-weight:500;letter-spacing:.2px}
+.mark small{display:block;font-family:var(--sans);font-size:12.5px;font-weight:400;opacity:.78;letter-spacing:0}
+.who{font-size:14px;opacity:.9;text-align:right}
+nav.tabs{border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:5}
+nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto}
+nav.tabs button{background:none;border:0;padding:14px 12px 12px;font-weight:500;color:var(--muted);border-bottom:3px solid transparent;white-space:nowrap;cursor:pointer}
+nav.tabs button[aria-current="page"]{color:var(--green);border-bottom-color:var(--green)}
+nav.tabs .count{display:inline-block;min-width:20px;margin-left:4px;padding:0 6px;border-radius:10px;background:var(--green-soft);color:var(--green);font-size:12.5px;text-align:center}
+main{padding:24px 0 64px}
+h1{font-family:var(--serif);font-weight:500;font-size:30px;line-height:1.2;margin:0 0 6px}
+h2{font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.25;margin:0}
+.lead{color:var(--muted);margin:0 0 22px}
+.slip{background:var(--card);border:1px solid var(--line);border-radius:6px;margin:0 0 18px}
+.slip-head{display:flex;justify-content:space-between;gap:16px;padding:18px 20px 14px}
+.fee{font-family:var(--serif);color:var(--gold);font-size:28px;line-height:1;text-align:right;white-space:nowrap}
+.fee small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:6px}
+.facts{color:var(--muted);font-size:14.5px;margin-top:6px}
+.slip-body{padding:0 20px 16px}
+.desc{white-space:pre-wrap;margin:0}
+.desc.clamp{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.more{background:none;border:0;padding:4px 0;color:var(--green);font-weight:500;cursor:pointer}
+.source{font-size:14.5px;margin-top:8px}
+.source b{font-weight:600}
+.tear{border:0;border-top:2px dashed var(--gold-line);margin:0}
+.slip-foot{padding:14px 20px 18px;background:#FBFCFA;border-radius:0 0 6px 6px}
+.state{font-size:14.5px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:500;background:var(--green-soft);color:var(--green)}
+.pill.warn{background:#F6EBD6;color:#7A5418}.pill.bad{background:var(--red-soft);color:var(--red)}.pill.grey{background:#ECEFEC;color:var(--muted)}
+.feedback{background:var(--red-soft);border-left:3px solid var(--red);padding:10px 12px;margin:10px 0;border-radius:0 4px 4px 0;font-size:15px;white-space:pre-wrap}
+.feedback.ok{background:var(--green-soft);border-left-color:var(--green)}
+form.stack{display:grid;gap:12px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-size:14px;font-weight:500;margin-bottom:4px}
+label .opt{font-weight:400;color:var(--muted)}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:5px;background:#fff}
+textarea{min-height:90px;resize:vertical}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:5px;padding:10px 18px;border:1px solid var(--green);background:var(--green);color:#fff;font-weight:600;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--green)}
+.btn.link{border:0;background:none;color:var(--muted);padding:6px 0;font-weight:500}
+.btn[disabled]{opacity:.6;cursor:wait}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:6px;padding:28px 20px;text-align:center;color:var(--muted)}
+.totals{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.total{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.total .n{font-family:var(--serif);font-size:26px;color:var(--gold);line-height:1.15}
+.total .l{color:var(--muted);font-size:14px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);font-size:15px;vertical-align:top}
+th{font-weight:600;font-size:13.5px;color:var(--muted);background:#FBFCFA}
+tr:last-child td{border-bottom:0}
+.auth{max-width:420px;margin:32px auto 0}
+.auth .card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:24px 22px}
+.switch{margin-top:14px;font-size:15px;color:var(--muted)}
+.switch button{background:none;border:0;color:var(--green);font-weight:600;cursor:pointer;padding:0}
+.note{font-size:14px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;border-radius:6px;font-size:15px;max-width:92vw;box-shadow:0 6px 24px rgba(23,63,52,.25);z-index:20}
+.toast.err{background:var(--red)}
+h3{font-family:var(--serif);font-weight:500;font-size:17px;margin:16px 0 6px}
+.ar{font-family:"Amiri",serif;font-size:19px;color:var(--muted)}
+.bar{height:8px;background:var(--green-soft);border-radius:4px;overflow:hidden;margin:4px 0 6px}
+.bar span{display:block;height:100%;background:var(--green)}
+.stages{list-style:none;padding:0;margin:0;display:grid;gap:4px;font-size:15px}
+.stages .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--line);margin-right:8px;vertical-align:1px}
+.stages .dot.go{background:var(--gold)}.stages .dot.done{background:var(--green)}
+.impact{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.impact span{background:#F6EBD6;color:#7A5418;border-radius:12px;padding:2px 10px;font-size:13.5px}
+.terms{background:var(--green-soft);border-radius:5px;padding:10px 14px;font-size:14.5px}
+.terms p{margin:4px 0}
+label.check{display:flex;gap:8px;align-items:flex-start;font-weight:400}
+label.check input{width:auto;margin-top:4px}
+.totals.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:760px){.totals.g4{grid-template-columns:1fr 1fr}}
+[hidden]{display:none!important}
+@media (max-width:560px){
+  h1{font-size:25px}.slip-head{flex-direction:column;gap:8px}.fee{text-align:left}
+  .row2,.totals{grid-template-columns:1fr}
+  nav.tabs .wrap{gap:0;padding:0}
+  nav.tabs button{flex:1;padding:13px 4px 11px;font-size:14.5px}
+  nav.tabs .long{display:none}
+  th:nth-child(3),td:nth-child(3){display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="mark">Aalim Books<small>Partners — investors, publishers &amp; authors</small></div>
+  <div class="who" id="who"></div>
+</div></header>
+<nav class="tabs" id="tabs" hidden><div class="wrap" id="tabbar"></div></nav>
+<main><div class="wrap" id="app"></div></main>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function(){
+  var KEY = "aalim.scholar.token"; // one account for scholars and partners
+  var app = document.getElementById("app");
+  var state = { tab: null, me: null, d: null };
+  function token(){ try { return localStorage.getItem(KEY) || ""; } catch(e){ return ""; } }
+  function setToken(t){ try { t ? localStorage.setItem(KEY, t) : localStorage.removeItem(KEY); } catch(e){} }
+  function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]; }); }
+  function money(n, cur){ return (cur || "PKR") + " " + Number(n || 0).toLocaleString("en-US", { maximumFractionDigits: 2 }); }
+  function day(d){ return d ? new Date(d).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" }) : ""; }
+  function pct(x){ return (Math.round(x * 1000) / 10) + "%"; }
+  var STAGE = { translation: "Translation", review: "Translation review", proofreading: "Proofreading", typesetting: "Typesetting", publishing: "Publishing", printing: "Printing", fatwa: "Fatwā review", research: "Research", teaching: "Teaching", other: "Other work" };
+  var BOOK = { proposed: ["Proposed — Aalim Books is reviewing", "grey"], draft: ["Being prepared", "grey"], fundraising: ["Raising funds", "warn"], funded: ["Fully funded", ""], in_production: ["In production", "warn"], published: ["Published", ""], closed: ["Closed", "grey"], cancelled: ["Cancelled", "bad"] };
+  var MODEL = { profit_share: "Profit share (muḍārabah)", sponsorship: "Sponsorship (ṣadaqah / waqf)" };
+
+  var toastTimer;
+  function toast(msg, isErr){
+    var t = document.getElementById("toast");
+    t.textContent = msg; t.className = "toast" + (isErr ? " err" : ""); t.hidden = false;
+    clearTimeout(toastTimer); toastTimer = setTimeout(function(){ t.hidden = true; }, isErr ? 6000 : 3500);
+  }
+  async function call(path, opts){
+    opts = opts || {};
+    var headers = { "Content-Type": "application/json" };
+    var tk = opts.token !== undefined ? opts.token : token();
+    if (tk) headers.Authorization = "Bearer " + tk;
+    var res = await fetch(path, { method: opts.method || "GET", headers: headers, body: opts.body ? JSON.stringify(opts.body) : undefined });
+    var data = {}; try { data = await res.json(); } catch(e){}
+    if (!res.ok) { var err = new Error(data.message || ("Something went wrong (" + res.status + ")")); err.status = res.status; throw err; }
+    return data;
+  }
+  async function login(email, password){ return (await call("/auth/customer/emailpass", { method: "POST", body: { email: email, password: password }, token: "" })).token; }
+
+  // ---------- Sign in / create account ----------
+  function renderAuth(mode){
+    document.getElementById("tabs").hidden = true; document.getElementById("who").textContent = "";
+    var signup = mode === "signup";
+    app.innerHTML = '<div class="auth"><h1>' + (signup ? "Create your partner account" : "Sign in") + '</h1>' +
+      '<p class="lead">' + (signup ? "Use the email address Aalim Books invited. Accounts are by invitation only." : "Investors, publishers and authors: follow your books, funding, sales and payments.") + '</p>' +
+      '<div class="card"><form class="stack" id="authForm">' +
+      (signup ? '<div><label for="fn">Full name</label><input id="fn" name="full_name" autocomplete="name" required></div>' : '') +
+      '<div><label for="em">Email</label><input id="em" name="email" type="email" autocomplete="email" required></div>' +
+      '<div><label for="pw">Password' + (signup ? ' <span class="opt">(at least 8 characters)</span>' : '') + '</label><input id="pw" name="password" type="password" minlength="' + (signup ? 8 : 1) + '" autocomplete="' + (signup ? "new-password" : "current-password") + '" required></div>' +
+      (signup ? '<div class="row2"><div><label for="ph">Phone / WhatsApp <span class="opt">(optional)</span></label><input id="ph" name="phone" autocomplete="tel"></div><div><label for="co">Country <span class="opt">(optional)</span></label><input id="co" name="country" autocomplete="country-name"></div></div>' : '') +
+      '<div class="actions"><button class="btn" type="submit">' + (signup ? "Create account" : "Sign in") + '</button></div></form></div>' +
+      '<p class="switch">' + (signup ? 'Already have an account? <button id="sw">Sign in</button>' : 'Invited by Aalim Books? <button id="sw">Create your account</button>') + '</p>' +
+      '<p class="note">Already a scholar with Aalim Books? Sign in with the same email and password.</p></div>';
+    document.getElementById("sw").onclick = function(){ renderAuth(signup ? "signin" : "signup"); };
+    document.getElementById("authForm").onsubmit = async function(e){
+      e.preventDefault();
+      var f = new FormData(e.target), btn = e.target.querySelector("button[type=submit]");
+      var email = String(f.get("email")).trim().toLowerCase(), password = String(f.get("password"));
+      btn.disabled = true;
+      try {
+        if (signup) {
+          var reg;
+          try { reg = (await call("/auth/customer/emailpass/register", { method: "POST", body: { email: email, password: password }, token: "" })).token; }
+          catch (err) { if (/exist/i.test(err.message)) reg = await login(email, password); else throw err; }
+          await call("/partner/register", { method: "POST", token: reg, body: { full_name: f.get("full_name"), phone: f.get("phone"), country: f.get("country") } });
+        }
+        var t = await login(email, password); setToken(t);
+        try { await loadAll(); }
+        catch (err) {
+          if (err.status === 401 || /not linked/i.test(err.message)) {
+            await call("/partner/register", { method: "POST", token: t, body: {} });
+            setToken(await login(email, password)); await loadAll();
+          } else throw err;
+        }
+        toast(signup ? "Welcome — your account is ready" : "Signed in");
+      } catch (err) {
+        setToken(""); toast(/invalid email or password/i.test(err.message) ? "That email and password do not match." : err.message, true);
+      } finally { btn.disabled = false; }
+    };
+  }
+
+  // ---------- Data ----------
+  function tabsFor(m){
+    var t = [];
+    if (m.is_investor) t.push(["invest", "Invest"], ["portfolio", "My portfolio"], ["returns", "Returns"]);
+    if (m.is_publisher) t.push(["publish", "My publishing"]);
+    if (m.is_author) t.push(["author", "My books & royalties"]);
+    if (m.is_author && state.d && state.d.author && state.d.author.scholar_work) t.push(["work", "My translation work"]);
+    t.push(["profile", "Profile"]);
+    return t;
+  }
+  async function loadAll(){
+    var r = await Promise.all([call("/partner/me"), call("/partner/dashboard")]);
+    state.me = r[0].partner; state.d = r[1];
+    document.getElementById("who").textContent = state.me.full_name + (state.me.organization ? " · " + state.me.organization : "");
+    var tabs = tabsFor(state.me);
+    if (!state.tab || !tabs.some(function(t){ return t[0] === state.tab; })) state.tab = tabs[0][0];
+    document.getElementById("tabbar").innerHTML = tabs.map(function(t){ return '<button data-tab="' + t[0] + '">' + esc(t[1]) + '</button>'; }).join("");
+    document.querySelectorAll("#tabbar button").forEach(function(b){ b.onclick = function(){ state.tab = b.dataset.tab; render(); window.scrollTo(0, 0); }; });
+    document.getElementById("tabs").hidden = false;
+    render();
+  }
+  async function refresh(){ try { await loadAll(); } catch(err){ handle(err); } }
+  function handle(err){ if (err.status === 401) { setToken(""); renderAuth("signin"); toast("Please sign in again", true); } else toast(err.message, true); }
+
+  // ---------- Pieces ----------
+  function pill(status){ var b = BOOK[status] || [status, "grey"]; return '<span class="pill ' + b[1] + '">' + esc(b[0]) + '</span>'; }
+  function bar(value, goal){ var p = goal > 0 ? Math.min(1, value / goal) : 0; return '<div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + Math.round(p * 100) + '"><span style="width:' + (p * 100).toFixed(1) + '%"></span></div>'; }
+  function stages(s){
+    var keys = Object.keys((s && s.stages) || {});
+    if (!keys.length) return '<p class="note">Work stages will appear here once Aalim Books posts them to scholars.</p>';
+    return '<ul class="stages">' + keys.map(function(k){
+      var st = s.stages[k], done = st.completed === st.total;
+      return '<li><span class="dot ' + (done ? "done" : st.in_progress || st.completed ? "go" : "") + '"></span>' + esc(STAGE[k] || k) +
+        '<span class="note"> — ' + st.completed + ' of ' + st.total + ' done' + (st.in_progress ? ", " + st.in_progress + " in progress" : "") + '</span></li>';
+    }).join("") + '</ul>';
+  }
+  function bookHead(b, right){
+    return '<div class="slip-head"><div><h2 dir="auto">' + esc(b.title) + '</h2>' + (b.title_ar ? '<div class="ar" dir="rtl" lang="ar">' + esc(b.title_ar) + '</div>' : '') +
+      '<div class="facts">' + pill(b.status) + ' ' + esc(MODEL[b.funding_model] || "") + '</div></div>' + (right || '') + '</div>';
+  }
+  function terms(b){
+    var t = [];
+    if (b.funding_model === "profit_share") t.push("Investors share <b>" + esc(b.investor_profit_share_pct == null ? "—" : b.investor_profit_share_pct + "%") + "</b> of net profit, divided by capital sent. Losses fall on capital; there is no guaranteed return.");
+    else t.push("Sponsorship: no financial return. You follow the book's progress and impact.");
+    if (b.author_royalty_pct) t.push("The author receives " + esc(b.author_royalty_pct) + "% of revenue as royalty, before profit is shared.");
+    return '<div class="terms">' + t.map(function(x){ return '<p>' + x + '</p>'; }).join("") +
+      (b.agreement_url ? '<p><a href="' + esc(b.agreement_url) + '" target="_blank" rel="noopener">Read the full agreement</a></p>' : '') + '</div>';
+  }
+  function totalsGrid(items){ return '<div class="totals g' + items.length + '">' + items.map(function(i){ return '<div class="total"><div class="n">' + esc(i[0]) + '</div><div class="l">' + esc(i[1]) + '</div></div>'; }).join("") + '</div>'; }
+  var FATWA_NOTE = '<p class="note">Fatwā review is done by muftis chosen by Aalim Books. Funding never influences a ruling.</p>';
+  function hasFatwa(s){ return s && s.stages && s.stages.fatwa; }
+
+  // ---------- Investor ----------
+  function renderInvest(){
+    var inv = state.d.investor, list = inv.opportunities;
+    var out = '<h1>Books raising funds</h1><p class="lead">Back the translation, editing, typesetting, printing and publishing of a book. Your pledge counts once Aalim Books receives the money.</p>';
+    if (!list.length) return out + '<div class="empty">No book is raising funds right now. New opportunities appear here.</div>';
+    return out + list.map(function(b){
+      var s = b.stats || {};
+      var foot = (b.my_pledges.length ? '<div class="state"><span class="pill warn">You pledged ' + esc(money(b.my_pledges.reduce(function(a, p){ return a + Number(p.amount); }, 0), b.currency)) + '</span>Aalim Books will send you payment details.' +
+          b.my_pledges.map(function(p){ return '<button class="btn link" data-cancel="' + p.id + '" data-book="' + b.id + '">Cancel pledge of ' + esc(money(p.amount, b.currency)) + '</button>'; }).join("") + '</div>' : '') +
+        '<details' + (b.my_pledges.length ? '' : '') + '><summary class="btn ghost" style="list-style:none;margin-top:8px">' + (b.my_pledges.length ? "Pledge more" : "Pledge to this book") + '</summary>' +
+        '<form class="stack" data-pledge="' + b.id + '" style="margin-top:14px">' + terms(b) +
+        '<div class="row2"><div><label>Amount (' + esc(b.currency) + ')</label><input name="amount" type="number" min="1" step="any" inputmode="decimal" required></div>' +
+        '<div><label>Note <span class="opt">(optional)</span></label><input name="note"></div></div>' +
+        '<label class="check"><input type="checkbox" name="accept_terms" required> I have read the terms above and understand there is no guaranteed return.</label>' +
+        '<div class="actions"><button class="btn" type="submit">Send pledge</button></div></form></details>';
+      return '<article class="slip">' + bookHead(b, '<div class="fee">' + esc(money(s.raised, b.currency)) + '<small>raised of ' + esc(money(b.funding_goal, b.currency)) + '</small></div>') +
+        '<div class="slip-body">' + bar(s.raised, b.funding_goal) +
+        '<div class="facts">' + esc(s.investors || 0) + ' investor(s) · ' + esc(money(s.pledged, b.currency)) + ' more pledged</div>' +
+        '<p class="desc clamp" dir="auto">' + esc(b.description) + '</p><button class="more" data-more>Read more</button>' +
+        (b.source_reference ? '<div class="source" dir="auto"><b>Source text:</b> ' + esc(b.source_reference) + '</div>' : '') +
+        '<h3>Work stages</h3>' + stages(s) + (hasFatwa(s) ? FATWA_NOTE : '') + '</div>' +
+        '<hr class="tear"><div class="slip-foot">' + foot + '</div></article>';
+    }).join("");
+  }
+  function renderPortfolio(){
+    var inv = state.d.investor, t = inv.totals, cur = (inv.portfolio[0] || inv.opportunities[0] || {}).currency || "PKR";
+    var out = '<h1>My portfolio</h1><p class="lead">The books you back, how far each has come, and your share.</p>' +
+      totalsGrid([[money(t.capital_received, cur), "Capital received"], [money(t.pledged, cur), "Pledged, not yet received"], [money(t.returns_paid, cur), "Profit paid to you"], [String(t.books_backed), "Books backed"]]);
+    if (!inv.portfolio.length) return out + '<div class="empty">You have not backed a book yet. See <a href="#" data-goto="invest">books raising funds</a>.</div>';
+    return out + inv.portfolio.map(function(b){
+      var s = b.stats || {};
+      var impact = [];
+      if (s.words_translated) impact.push(Number(s.words_translated).toLocaleString() + " words translated");
+      if (s.tasks_total) impact.push(s.tasks_completed + " of " + s.tasks_total + " work items done");
+      if (s.units_sold) impact.push(Number(s.units_sold).toLocaleString() + " copies sold");
+      return '<article class="slip">' + bookHead(b, '<div class="fee">' + esc(money(b.my_capital, b.currency)) + '<small>your capital · ' + esc(pct(b.my_share_of_capital)) + ' of the book</small></div>') +
+        '<div class="slip-body">' + bar(s.raised, b.funding_goal) + '<div class="facts">' + esc(money(s.raised, b.currency)) + ' raised of ' + esc(money(b.funding_goal, b.currency)) + '</div>' +
+        (impact.length ? '<div class="impact">' + impact.map(function(x){ return '<span>' + esc(x) + '</span>'; }).join("") + '</div>' : '') +
+        '<h3>Work stages</h3>' + stages(s) + (hasFatwa(s) ? FATWA_NOTE : '') +
+        (b.funding_model === "profit_share" && (s.revenue || s.net_profit) ? '<h3>Sales so far</h3><p class="note">Revenue ' + esc(money(s.revenue, b.currency)) + ' · costs ' + esc(money(s.costs, b.currency)) + ' · net profit ' + esc(money(s.net_profit, b.currency)) + ' · paid to you ' + esc(money(b.my_returns, b.currency)) + '</p>' : '') +
+        '<h3>Your commitments</h3><table><thead><tr><th>Amount</th><th>Status</th><th>Date</th></tr></thead><tbody>' +
+        b.my_commitments.map(function(c){ return '<tr><td>' + esc(money(c.amount, c.currency)) + '</td><td>' + ({ pledged: '<span class="pill warn">Pledged</span>', received: '<span class="pill">Received</span>', refunded: '<span class="pill grey">Refunded</span>', cancelled: '<span class="pill grey">Cancelled</span>' }[c.status]) + (c.reference ? '<div class="note">Ref ' + esc(c.reference) + '</div>' : '') + '</td><td>' + esc(day(c.received_at || c.created_at)) + '</td></tr>'; }).join("") +
+        '</tbody></table></div></article>';
+    }).join("");
+  }
+  function payTable(list, empty){
+    if (!list.length) return '<div class="empty">' + empty + '</div>';
+    return '<table><thead><tr><th>Book</th><th>Amount</th><th>Paid on</th><th>Status</th></tr></thead><tbody>' + list.map(function(d){
+      return '<tr><td dir="auto">' + esc(d.book_title || "") + '<div class="note">' + esc(d.note || "") + '</div></td><td>' + esc(money(d.amount, d.currency)) + '</td>' +
+        '<td>' + esc(d.paid_at ? day(d.paid_at) : "—") + (d.reference ? '<div class="note">Ref ' + esc(d.reference) + '</div>' : '') + '</td>' +
+        '<td>' + (d.status === "paid" ? '<span class="pill">Paid</span>' : d.status === "pending" ? '<span class="pill warn">To be paid</span>' : '<span class="pill grey">Cancelled</span>') + '</td></tr>';
+    }).join("") + '</tbody></table>';
+  }
+  function renderReturns(){
+    var inv = state.d.investor, t = inv.totals, cur = (inv.returns[0] || {}).currency || "PKR";
+    return '<h1>Returns</h1><p class="lead">Profit shares are worked out when Aalim Books approves each sales period. They are paid to the account in your profile.</p>' +
+      (!state.me.payout_method ? '<div class="feedback">Add how you want to be paid in your <a href="#" data-goto="profile">profile</a>.</div>' : '') +
+      totalsGrid([[money(t.returns_owed, cur), "On its way to you"], [money(t.returns_paid, cur), "Paid to you so far"]]) +
+      payTable(inv.returns, "No profit shares yet. They appear after a book's sales period is approved.");
+  }
+
+  // ---------- Publisher ----------
+  function renderPublish(){
+    var books = state.d.publisher.books;
+    var out = '<h1>My publishing</h1><p class="lead">Propose books, follow their funding and production, and report sales.</p>' +
+      '<details class="slip" style="padding:0"><summary class="btn ghost" style="list-style:none;margin:16px 20px">Propose a new book</summary>' +
+      '<form class="stack" id="proposeForm" style="padding:0 20px 18px">' +
+      '<div class="row2"><div><label>Title (English)</label><input name="title" required></div><div><label>Title (Arabic) <span class="opt">(optional)</span></label><input name="title_ar" dir="rtl" lang="ar"></div></div>' +
+      '<div><label>What the book is and why it matters</label><textarea name="description" dir="auto" required></textarea></div>' +
+      '<div><label>Source text <span class="opt">(edition, Shamela ID, link)</span></label><input name="source_reference" dir="auto"></div>' +
+      '<div class="row2"><div><label>Budget needed</label><input name="funding_goal" type="number" min="0" step="any" required></div><div><label>Currency</label><input name="currency" value="PKR" maxlength="3"></div></div>' +
+      '<div><label>Preferred funding</label><select name="funding_model"><option value="profit_share">Profit share (muḍārabah)</option><option value="sponsorship">Sponsorship (ṣadaqah / waqf)</option></select></div>' +
+      '<p class="note">Aalim Books reviews proposals and agrees the terms with you before investors can see them.</p>' +
+      '<div class="actions"><button class="btn" type="submit">Send proposal</button></div></form></details>';
+    if (!books.length) return out + '<div class="empty">No books yet.</div>';
+    return out + books.map(function(b){
+      var s = b.stats || {};
+      var salesForm = ["published", "closed"].indexOf(b.status) >= 0 ? '<details><summary class="btn ghost" style="list-style:none">Report sales for a period</summary><form class="stack" data-sales="' + b.id + '" style="margin-top:14px">' +
+        '<div class="row2"><div><label>From</label><input name="period_start" type="date" required></div><div><label>To</label><input name="period_end" type="date" required></div></div>' +
+        '<div class="row2"><div><label>Copies sold</label><input name="units_sold" type="number" min="0" required></div><div><label>Revenue (' + esc(b.currency) + ')</label><input name="revenue" type="number" min="0" step="any" required></div></div>' +
+        '<div><label>Costs for this period <span class="opt">(printing, shipping, store fees)</span></label><input name="costs" type="number" min="0" step="any" value="0"></div>' +
+        '<div><label>Note <span class="opt">(optional)</span></label><input name="note"></div>' +
+        '<div class="actions"><button class="btn" type="submit">Send sales report</button></div></form></details>' : '<p class="note">You can report sales once the book is published.</p>';
+      return '<article class="slip">' + bookHead(b, '<div class="fee">' + esc(money(s.raised, b.currency)) + '<small>raised of ' + esc(money(b.funding_goal, b.currency)) + '</small></div>') +
+        '<div class="slip-body">' + bar(s.raised, b.funding_goal) +
+        '<div class="facts">' + esc(s.investors || 0) + ' investor(s) · spent on scholars ' + esc(money(s.spent_paid, b.currency)) + (s.spent_owed ? ' (+ ' + esc(money(s.spent_owed, b.currency)) + ' owed)' : '') + '</div>' +
+        '<h3>Work stages</h3>' + stages(s) +
+        '<h3>Sales</h3>' + (b.sales_reports.length ? '<table><thead><tr><th>Period</th><th>Copies</th><th>Revenue</th><th>Status</th></tr></thead><tbody>' + b.sales_reports.map(function(r){
+          return '<tr><td>' + esc(day(r.period_start)) + ' – ' + esc(day(r.period_end)) + '</td><td>' + esc(Number(r.units_sold || 0).toLocaleString()) + '</td><td>' + esc(money(r.revenue, b.currency)) + '<div class="note">costs ' + esc(money(r.costs, b.currency)) + '</div></td><td>' +
+            (r.status === "approved" ? '<span class="pill">Approved</span>' : r.status === "rejected" ? '<span class="pill bad">Returned</span><div class="note" dir="auto">' + esc(r.admin_feedback || "") + '</div>' : '<span class="pill warn">Waiting</span>') + '</td></tr>';
+        }).join("") + '</tbody></table>' : '<p class="note">No sales reported yet.</p>') + '</div>' +
+        '<hr class="tear"><div class="slip-foot">' + salesForm + '</div></article>';
+    }).join("");
+  }
+
+  // ---------- Author ----------
+  function renderAuthor(){
+    var a = state.d.author, cur = (a.books[0] || {}).currency || "PKR";
+    var out = '<h1>My books &amp; royalties</h1><p class="lead">Your books with Aalim Books, how they are selling, and your royalties.</p>' +
+      totalsGrid([[money(a.totals.royalties_owed, cur), "Royalties on their way"], [money(a.totals.royalties_paid, cur), "Royalties paid so far"]]);
+    out += a.books.length ? a.books.map(function(b){
+      var s = b.stats || {};
+      return '<article class="slip">' + bookHead(b, '<div class="fee">' + esc(Number(s.units_sold || 0).toLocaleString()) + '<small>copies sold</small></div>') +
+        '<div class="slip-body">' + (b.author_royalty_pct ? '<p class="facts">Your royalty: ' + esc(b.author_royalty_pct) + '% of revenue · revenue so far ' + esc(money(s.revenue, b.currency)) + '</p>' : '') +
+        '<h3>Work stages</h3>' + stages(s) + '</div></article>';
+    }).join("") : '<div class="empty">No books are linked to you as author yet.</div>';
+    return out + '<h2 style="margin:26px 0 10px">Royalty payments</h2>' + payTable(a.royalties, "No royalties yet. They are worked out when sales periods are approved.");
+  }
+  function renderWork(){
+    var w = state.d.author.scholar_work;
+    return '<h1>My translation work</h1><p class="lead">Work you did as a scholar. To apply for new projects use the <a href="/portal">scholar portal</a>.</p>' +
+      totalsGrid([[String(w.completed), "Work items approved"], [Number(w.words_translated).toLocaleString(), "Words translated"], [money(w.earned_paid), "Paid to you"], [money(w.earned_owed), "On its way"]]) +
+      (w.tasks.length ? '<table><thead><tr><th>Work</th><th>Book</th><th>Status</th></tr></thead><tbody>' + w.tasks.map(function(t){
+        return '<tr><td dir="auto">' + esc(t.title) + '<div class="note">' + esc(STAGE[t.category] || t.category) + (t.word_count ? ", " + Number(t.word_count).toLocaleString() + " words" : "") + '</div></td><td dir="auto">' + esc(t.book_title || "—") + '</td><td>' + esc({ assigned: "In progress", in_review: "Being reviewed", completed: "Approved", cancelled: "Cancelled", open: "Open" }[t.status] || t.status) + '</td></tr>';
+      }).join("") + '</tbody></table>' : '<div class="empty">No scholar work yet.</div>');
+  }
+
+  // ---------- Profile ----------
+  function renderProfile(){
+    var m = state.me, methods = ["Bank transfer", "JazzCash", "Easypaisa", "Payoneer", "Wise", "Other"];
+    var roles = [m.is_investor && "Investor", m.is_publisher && "Publisher", m.is_author && "Author"].filter(Boolean).join(", ");
+    return '<h1>Profile</h1><p class="lead">Signed in as ' + esc(m.email) + ' · ' + esc(roles) + '.</p>' +
+      '<div class="slip"><div class="slip-body" style="padding-top:18px"><form class="stack" id="profileForm">' +
+      '<div class="row2"><div><label>Full name</label><input name="full_name" dir="auto" value="' + esc(m.full_name) + '" required></div><div><label>Organization <span class="opt">(optional)</span></label><input name="organization" dir="auto" value="' + esc(m.organization) + '"></div></div>' +
+      '<div class="row2"><div><label>Phone / WhatsApp</label><input name="phone" value="' + esc(m.phone) + '"></div><div><label>Country</label><input name="country" value="' + esc(m.country) + '"></div></div>' +
+      '<hr class="tear" style="margin:6px 0">' +
+      '<div><label>How you want to be paid</label><select name="payout_method"><option value="">Choose…</option>' + methods.map(function(x){ return '<option' + (m.payout_method === x ? " selected" : "") + '>' + x + '</option>'; }).join("") + '</select></div>' +
+      '<div><label>Payment details</label><textarea name="payout_details" placeholder="Account title, bank and IBAN — or wallet number — or Payoneer/Wise email">' + esc(m.payout_details) + '</textarea><div class="note">Only Aalim Books can see these details.</div></div>' +
+      '<div class="actions"><button class="btn" type="submit">Save profile</button><button class="btn link" type="button" id="signout">Sign out</button></div></form></div></div>';
+  }
+
+  function render(){
+    document.querySelectorAll("#tabbar button").forEach(function(b){ if (b.dataset.tab === state.tab) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current"); });
+    var views = { invest: renderInvest, portfolio: renderPortfolio, returns: renderReturns, publish: renderPublish, author: renderAuthor, work: renderWork, profile: renderProfile };
+    app.innerHTML = views[state.tab]();
+    bind();
+  }
+  function formBody(f){ var o = {}; new FormData(f).forEach(function(v, k){ o[k] = v; }); return o; }
+  function bind(){
+    app.querySelectorAll("[data-more]").forEach(function(b){
+      var d = b.previousElementSibling;
+      if (d.scrollHeight <= d.clientHeight + 2) { b.hidden = true; return; }
+      b.onclick = function(){ d.classList.toggle("clamp"); b.textContent = d.classList.contains("clamp") ? "Read more" : "Show less"; };
+    });
+    app.querySelectorAll("[data-goto]").forEach(function(a){ a.onclick = function(e){ e.preventDefault(); state.tab = a.dataset.goto; render(); }; });
+    app.querySelectorAll("form[data-pledge]").forEach(function(f){
+      f.onsubmit = async function(e){
+        e.preventDefault(); var b = f.querySelector("button[type=submit]"); b.disabled = true; var x = formBody(f);
+        try { await call("/partner/opportunities/" + f.dataset.pledge + "/pledge", { method: "POST", body: { amount: x.amount, note: x.note, accept_terms: !!x.accept_terms } }); toast("Pledge sent — Aalim Books will contact you with payment details"); await refresh(); }
+        catch (err) { handle(err); } finally { b.disabled = false; }
+      };
+    });
+    app.querySelectorAll("[data-cancel]").forEach(function(b){
+      b.onclick = async function(){
+        if (!confirm("Cancel this pledge?")) return;
+        try { await call("/partner/opportunities/" + b.dataset.book + "/pledge?commitment_id=" + encodeURIComponent(b.dataset.cancel), { method: "DELETE" }); toast("Pledge cancelled"); await refresh(); } catch (err) { handle(err); }
+      };
+    });
+    var pf = document.getElementById("proposeForm");
+    if (pf) pf.onsubmit = async function(e){
+      e.preventDefault(); var b = pf.querySelector("button"); b.disabled = true;
+      try { await call("/partner/book-projects", { method: "POST", body: formBody(pf) }); toast("Proposal sent to Aalim Books"); await refresh(); } catch (err) { handle(err); } finally { b.disabled = false; }
+    };
+    app.querySelectorAll("form[data-sales]").forEach(function(f){
+      f.onsubmit = async function(e){
+        e.preventDefault(); var b = f.querySelector("button"); b.disabled = true;
+        try { await call("/partner/book-projects/" + f.dataset.sales + "/sales", { method: "POST", body: formBody(f) }); toast("Sales report sent — Aalim Books will review it"); await refresh(); } catch (err) { handle(err); } finally { b.disabled = false; }
+      };
+    });
+    var prf = document.getElementById("profileForm");
+    if (prf) {
+      prf.onsubmit = async function(e){
+        e.preventDefault(); var b = prf.querySelector("button"); b.disabled = true;
+        try { state.me = (await call("/partner/me", { method: "POST", body: formBody(prf) })).partner; toast("Profile saved"); await refresh(); } catch (err) { handle(err); } finally { b.disabled = false; }
+      };
+      document.getElementById("signout").onclick = function(){ setToken(""); state = { tab: null }; renderAuth("signin"); };
+    }
+  }
+
+  if (token()) refresh(); else renderAuth("signin");
+})();
+</script>
+</body>
+</html>

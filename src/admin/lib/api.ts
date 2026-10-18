@@ -26,6 +26,8 @@ export const STATUS_COLOR: Record<string, "green" | "orange" | "blue" | "grey" |
   pending: "orange", accepted: "green", rejected: "red", withdrawn: "grey",
   submitted: "orange", approved: "green", changes_requested: "red",
   paid: "green", invited: "grey", active: "green", suspended: "red",
+  proposed: "purple", fundraising: "orange", funded: "green", in_production: "blue", published: "green", closed: "grey",
+  pledged: "orange", received: "green", refunded: "grey",
 }
 
 export const STATUS_LABEL: Record<string, string> = {
@@ -33,9 +35,20 @@ export const STATUS_LABEL: Record<string, string> = {
   completed: "Completed", cancelled: "Cancelled", pending: "Pending", accepted: "Chosen", rejected: "Not chosen",
   withdrawn: "Withdrawn", submitted: "Waiting for review", approved: "Approved", changes_requested: "Changes requested",
   paid: "Paid", invited: "Invited (not signed up yet)", active: "Active", suspended: "Paused",
+  proposed: "Proposed by publisher", fundraising: "Raising funds", funded: "Fully funded", in_production: "In production",
+  published: "Published", closed: "Closed", pledged: "Pledged", received: "Received", refunded: "Refunded",
 }
+
+export const FUNDING_MODEL_LABEL: Record<string, string> = {
+  profit_share: "Profit share (muḍārabah)", sponsorship: "Sponsorship (ṣadaqah / waqf)",
+}
+
+export const BOOK_STATUSES = [
+  ["proposed", "Proposed by publisher"], ["draft", "Draft"], ["fundraising", "Raising funds"], ["funded", "Fully funded"],
+  ["in_production", "In production"], ["published", "Published"], ["closed", "Closed"], ["cancelled", "Cancelled"],
+] as const
 
 export const CATEGORIES = [
   ["translation", "Translation"], ["review", "Translation review"], ["proofreading", "Proofreading"],
-  ["typesetting", "Typesetting"], ["research", "Research"], ["teaching", "Teaching"], ["other", "Other"],
+  ["typesetting", "Typesetting"], ["publishing", "Publishing"], ["printing", "Printing"], ["fatwa", "Fatwā review"], ["research", "Research"], ["teaching", "Teaching"], ["other", "Other"],
 ] as const

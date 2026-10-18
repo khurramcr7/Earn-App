@@ -5,7 +5,7 @@ import type EarnModuleService from "../modules/earn/service"
 
 export const earn = (req: MedusaRequest): EarnModuleService => req.scope.resolve(EARN_MODULE)
 
-export const PROJECT_CATEGORIES = ["translation", "review", "proofreading", "typesetting", "research", "teaching", "other"] as const
+export const PROJECT_CATEGORIES = ["translation", "review", "proofreading", "typesetting", "publishing", "printing", "fatwa", "research", "teaching", "other"] as const
 export const PROJECT_STATUSES = ["draft", "open", "assigned", "in_review", "completed", "cancelled"] as const
 
 export function body<T = Record<string, unknown>>(req: MedusaRequest): T {

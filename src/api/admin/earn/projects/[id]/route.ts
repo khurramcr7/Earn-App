@@ -37,6 +37,7 @@ export async function POST(req: MedusaRequest, res: MedusaResponse) {
   if ("currency" in b) update.currency = (str(b.currency, "Currency", { max: 3 }) || "PKR").toUpperCase()
   if ("deadline" in b) update.deadline = date(b.deadline, "Deadline")
   if ("status" in b) update.status = oneOf(b.status, PROJECT_STATUSES, "status")
+  if ("book_project_id" in b) update.book_project_id = str(b.book_project_id, "Book project", { max: 100 })
   if (update.status === "open") update.assigned_scholar_id = null
   const project = await earn(req).updateProjects(update as any)
   res.json({ project })

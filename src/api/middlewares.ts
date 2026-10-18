@@ -13,5 +13,14 @@ export default defineMiddlewares({
     { matcher: "/scholar/me", middlewares: [authenticate("customer", ["bearer"])] },
     { matcher: "/scholar/projects*", middlewares: [authenticate("customer", ["bearer"])] },
     { matcher: "/scholar/earnings", middlewares: [authenticate("customer", ["bearer"])] },
+    // Investors, publishers and authors use the same customer accounts on /partners
+    {
+      matcher: "/partner/register",
+      middlewares: [authenticate("customer", ["bearer"], { allowUnregistered: true })],
+    },
+    { matcher: "/partner/me", middlewares: [authenticate("customer", ["bearer"])] },
+    { matcher: "/partner/dashboard", middlewares: [authenticate("customer", ["bearer"])] },
+    { matcher: "/partner/opportunities*", middlewares: [authenticate("customer", ["bearer"])] },
+    { matcher: "/partner/book-projects*", middlewares: [authenticate("customer", ["bearer"])] },
   ],
 })
